@@ -17,8 +17,8 @@ def mult(request,a,b):
     return HttpResponse('<h1>The multiplication of  {0} and {1} is {2}</h1>'.format(a,b,op))
 
 def div(request,a,b):
-    op=a/b
     if b!=0:
+        op=a/b
         return HttpResponse('<h1>The division of  {0} by {1} is {2}</h1>'.format(a,b,op))
     else:
         return HttpResponse('<h1>Cannot divide the numbers because the divisor is 0</h1>')
